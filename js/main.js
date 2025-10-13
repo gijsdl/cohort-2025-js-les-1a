@@ -1,4 +1,6 @@
-// //Dit zijn de eerste variabelen die jullie hebben aangemaakt
+// Les 1: Introductie
+
+//Dit zijn de eerste variabelen die jullie hebben aangemaakt
 
 // console.log("Main loaded");
 // const name = "de Lange";
@@ -9,6 +11,7 @@
 // console.log(score);
 
 
+// Les 2: Debugging
 
 // let age = 28;
 // console.log(age);
@@ -17,6 +20,8 @@
 // const price = 26.99;
 // console.log(price);
 // price = 10.00;
+
+// Les 3: Interactie
 
 // alert('hello world');
 
@@ -28,6 +33,7 @@
 //     alert('incorrect');
 // }
 
+// Les 4: Functies deel 1
 
 // function sayHello(){
 //     alert("hello");
@@ -35,6 +41,8 @@
 
 // sayHello();
 // sayHello();
+
+// Les 4: Functies deel 2
 
 // function calculateNewPrice(money) {
 //     let newPrice = 0;
@@ -55,6 +63,8 @@
 // alert(calculateNewPrice(money1));
 // alert(calculateNewPrice(50));
 
+// Les 6: DOM
+
 // const h1Element = document.querySelector('h1');
 // const textElement = document.querySelector('#text');
 // const divElement = document.querySelector('#container');
@@ -74,6 +84,8 @@
 // }
 
 // changeTextElement(true);
+
+// Les 8: Eventes
 
 const clickP = document.querySelector('#total-click');
 const clickBtn = document.querySelector('#click');
