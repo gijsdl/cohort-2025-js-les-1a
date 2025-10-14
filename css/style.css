@@ -1,0 +1,11 @@
+.red{
+    background-color: red;
+}
+
+.red:hover{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.color{
+    color: blue;
+}

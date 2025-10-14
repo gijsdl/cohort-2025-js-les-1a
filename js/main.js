@@ -87,14 +87,35 @@
 
 // Les 8: Eventes
 
-const clickP = document.querySelector('#total-click');
-const clickBtn = document.querySelector('#click');
-let click = 0;
+// const clickP = document.querySelector('#total-click');
+// const clickBtn = document.querySelector('#click');
+// let click = 0;
 
-clickBtn.addEventListener('click', updateClick);
+// clickBtn.addEventListener('click', updateClick);
 
-function updateClick(){
-    click = click + 1;
-    clickP.textContent = click;
-    console.log(click);
+// function updateClick(){
+//     click = click + 1;
+//     clickP.textContent = click;
+//     console.log(click);
+// }
+
+
+//Les 9: DOM-style
+
+const button = document.querySelector('#click');
+
+button.addEventListener('click', changeColor);
+
+function changeColor() {
+    // button.style = "background-color: red";
+    if(button.classList.contains('color')){
+        button.classList.remove('color');
+    }
+    // if (button.classList.contains('red')) {
+    //     button.classList.add('color');
+    // }
+    console.log(button.classList);
+    button.classList.add('red');
+    console.log(button.classList);
+
 }
