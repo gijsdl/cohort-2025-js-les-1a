@@ -102,20 +102,65 @@
 
 //Les 9: DOM-style
 
-const button = document.querySelector('#click');
+// const button = document.querySelector('#click');
 
-button.addEventListener('click', changeColor);
+// button.addEventListener('click', changeColor);
 
-function changeColor() {
-    // button.style = "background-color: red";
-    if(button.classList.contains('color')){
-        button.classList.remove('color');
-    }
-    // if (button.classList.contains('red')) {
-    //     button.classList.add('color');
-    // }
-    console.log(button.classList);
-    button.classList.add('red');
-    console.log(button.classList);
+// function changeColor() {
+//     // button.style = "background-color: red";
+//     if(button.classList.contains('color')){
+//         button.classList.remove('color');
+//     }
+//     // if (button.classList.contains('red')) {
+//     //     button.classList.add('color');
+//     // }
+//     console.log(button.classList);
+//     button.classList.add('red');
+//     console.log(button.classList);
 
+// }
+
+//les 10: while-loops
+
+let index = 1;
+
+while(index <= 10){
+    console.log(index + " * 10 = " + index * 10);
+    // index = index + 1;
+    index++;
 }
+
+let a = 5;
+let b = 3;
+let c = 5;
+
+// OR
+
+if(a === b || a=== c){
+    console.log('klopt');
+}
+
+// AND
+
+if (a=== b && a === c){
+    console.log('klopt');
+    
+}
+
+// Gemiddelde bereken met while loop
+
+let number = null;
+let total = 0;
+let repeated = 0;
+
+while (number !== 0){
+    number = parseInt(prompt("Geef een nieuwe waarde. Vul het getal 0 in als je klaar bent"));
+    // total = total + number;
+    total += number;
+    repeated++;
+    console.log(repeated);
+    console.log(total);
+}
+
+const avg = total / repeated;
+console.log(avg);
