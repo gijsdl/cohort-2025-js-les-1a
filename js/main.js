@@ -167,6 +167,7 @@
 
 //les 11
 
+const carsElement = document.querySelector('.cars');
 const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
 
 // console.log(cars);
@@ -174,6 +175,7 @@ const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
 // console.log(cars[2]);
 
 function showCars() {
+    carsElement.innerHTML = '';
     let i = 0;
 
     console.log(cars.length);
@@ -181,6 +183,8 @@ function showCars() {
     while (i < cars.length) {
         const car = cars[i];
         console.log(car);
+        // carsElement.innerHTML += 'Auto ' + (i + 1) + ' = ' + car;
+        carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
         i++;
     }
 }
