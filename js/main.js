@@ -122,45 +122,75 @@
 
 //les 10: while-loops
 
-let index = 1;
+// let index = 1;
 
-while(index <= 10){
-    console.log(index + " * 10 = " + index * 10);
-    // index = index + 1;
-    index++;
-}
+// while(index <= 10){
+//     console.log(index + " * 10 = " + index * 10);
+//     // index = index + 1;
+//     index++;
+// }
 
-let a = 5;
-let b = 3;
-let c = 5;
+// let a = 5;
+// let b = 3;
+// let c = 5;
 
-// OR
+// // OR
 
-if(a === b || a=== c){
-    console.log('klopt');
-}
+// if(a === b || a=== c){
+//     console.log('klopt');
+// }
 
-// AND
+// // AND
 
-if (a=== b && a === c){
-    console.log('klopt');
+// if (a=== b && a === c){
+//     console.log('klopt');
+
+// }
+
+// // Gemiddelde bereken met while loop
+
+// let number = null;
+// let total = 0;
+// let repeated = 0;
+
+// while (number !== 0){
+//     number = parseInt(prompt("Geef een nieuwe waarde. Vul het getal 0 in als je klaar bent"));
+//     // total = total + number;
+//     total += number;
+//     repeated++;
+//     console.log(repeated);
+//     console.log(total);
+// }
+
+// const avg = total / repeated;
+// console.log(avg);
+
+//les 11
+
+const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
+
+// console.log(cars);
+
+// console.log(cars[2]);
+
+function showCars() {
+    let i = 0;
+
+    console.log(cars.length);
     
+    while (i < cars.length) {
+        const car = cars[i];
+        console.log(car);
+        i++;
+    }
 }
 
-// Gemiddelde bereken met while loop
+showCars();
 
-let number = null;
-let total = 0;
-let repeated = 0;
+cars.push('audi');
 
-while (number !== 0){
-    number = parseInt(prompt("Geef een nieuwe waarde. Vul het getal 0 in als je klaar bent"));
-    // total = total + number;
-    total += number;
-    repeated++;
-    console.log(repeated);
-    console.log(total);
-}
+showCars();
 
-const avg = total / repeated;
-console.log(avg);
+cars.pop();
+
+showCars();
