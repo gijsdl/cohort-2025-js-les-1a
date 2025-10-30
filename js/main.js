@@ -167,34 +167,62 @@
 
 //les 11
 
+// const carsElement = document.querySelector('.cars');
+// const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
+
+// // console.log(cars);
+
+// // console.log(cars[2]);
+
+// function showCars() {
+//     carsElement.innerHTML = '';
+//     let i = 0;
+
+//     console.log(cars.length);
+
+//     while (i < cars.length) {
+//         const car = cars[i];
+//         console.log(car);
+//         // carsElement.innerHTML += 'Auto ' + (i + 1) + ' = ' + car;
+//         carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
+//         i++;
+//     }
+// }
+
+// showCars();
+
+// cars.push('audi');
+
+// showCars();
+
+// cars.pop();
+
+// showCars();
+
+//les 12
+
 const carsElement = document.querySelector('.cars');
 const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
 
-// console.log(cars);
-
-// console.log(cars[2]);
-
-function showCars() {
-    carsElement.innerHTML = '';
-    let i = 0;
-
-    console.log(cars.length);
-    
-    while (i < cars.length) {
-        const car = cars[i];
-        console.log(car);
-        // carsElement.innerHTML += 'Auto ' + (i + 1) + ' = ' + car;
-        carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
-        i++;
-    }
+for (let i = 0; i < cars.length; i++) {
+    const car = cars[i];
+    carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
 }
 
-showCars();
+const numberElements = document.querySelectorAll('.number');
+console.log(numberElements);
+for (let i = 0; i < numberElements.length; i++) {
+    const numberElement = numberElements[i];
+    numberElement.style = 'background-color: red;'
+}
+// numberElements[0].classList.add('red');
 
-cars.push('audi');
-
-showCars();
-
-cars.pop();
-
-showCars();
+const randomNumber = Math.floor(Math.random() * 10);
+// console.log(randomNumber);
+let guessedNumber = 0;
+while (randomNumber !== guessedNumber) {
+    guessedNumber = parseInt(prompt("vul een getal in"));
+    if (guessedNumber === randomNumber) {
+        alert("goed geraden!");
+    }
+}
