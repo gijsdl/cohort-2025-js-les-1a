@@ -201,28 +201,138 @@
 
 //les 12
 
-const carsElement = document.querySelector('.cars');
-const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
+// const carsElement = document.querySelector('.cars');
+// const cars = ['mithubithi', 'toyota', 'lancia', 'bmw'];
 
-for (let i = 0; i < cars.length; i++) {
-    const car = cars[i];
-    carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
-}
+// for (let i = 0; i < cars.length; i++) {
+//     const car = cars[i];
+//     carsElement.innerHTML += `Auto ${i + 1} = ${car}, `;
+// }
 
-const numberElements = document.querySelectorAll('.number');
-console.log(numberElements);
-for (let i = 0; i < numberElements.length; i++) {
-    const numberElement = numberElements[i];
-    numberElement.style = 'background-color: red;'
-}
-// numberElements[0].classList.add('red');
+// const numberElements = document.querySelectorAll('.number');
+// console.log(numberElements);
+// for (let i = 0; i < numberElements.length; i++) {
+//     const numberElement = numberElements[i];
+//     numberElement.style = 'background-color: red;'
+// }
+// // numberElements[0].classList.add('red');
 
-const randomNumber = Math.floor(Math.random() * 10);
-// console.log(randomNumber);
-let guessedNumber = 0;
-while (randomNumber !== guessedNumber) {
-    guessedNumber = parseInt(prompt("vul een getal in"));
-    if (guessedNumber === randomNumber) {
-        alert("goed geraden!");
+// const randomNumber = Math.floor(Math.random() * 10);
+// // console.log(randomNumber);
+// let guessedNumber = 0;
+// while (randomNumber !== guessedNumber) {
+//     guessedNumber = parseInt(prompt("vul een getal in"));
+//     if (guessedNumber === randomNumber) {
+//         alert("goed geraden!");
+//     }
+// }
+
+// const randomDiv = document.querySelector('.random-div');
+// const addStyleBtn = document.querySelector('.add-style-btn');
+// const removeStyleBtn = document.querySelector('.remove-style-btn');
+// const toggleStyleBtn = document.querySelector('.toggle-style-btn');
+
+// addStyleBtn.addEventListener('click', addStyle);
+// removeStyleBtn.addEventListener('click', removeStyle);
+// toggleStyleBtn.addEventListener('click', toggleStyle);
+
+// function addStyle(){
+//     randomDiv.classList.add('div-style');
+// }
+
+// function removeStyle(){
+//     randomDiv.classList.remove('div-style');
+// }
+
+// function toggleStyle(){
+//     randomDiv.classList.toggle('div-style');
+// }
+
+// function showTable(table) {
+//     console.log(`tafel van ${table}`);
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(calculateTable(i, table));
+//     }
+// }
+
+// function calculateTable(i, table) {
+//     return `${i} * ${table} = ${i * table}`;
+// }
+
+// showTable(1);
+// showTable(2);
+
+
+function addNumbers(total) {
+    let sum = 0;
+    for (let i = 1; i <= total; i++) {
+        if (i < 10) {
+            let temp = 5;
+            sum += temp;
+        } else {
+            sum += i;
+        }
     }
+    return sum;
 }
+
+console.log(addNumbers(10));
+console.log(addNumbers(20));
+
+
+// 0 | 1 | 2
+// 3 | 4 | 5
+// 6 | 7 | 8
+
+let board = [
+    'X', 'X', 'O', // rij 1
+    'O', 'X', '',  // rij 2
+    '', 'O', ''   // rij 3
+];
+
+console.log(board[5]);
+
+if(board[5] === ''){
+    console.log('is leeg');
+} else {
+    console.log(board[5]);
+    
+}
+
+board[5] = 'X'
+
+console.log(board);
+
+// P02 les 4
+// Schrijf de stappen om te controleren 
+// of een speler 3-op-een-rij heeft
+
+/*
+
+nieuw
+
+begin een functie check() met 3 parameters a, b en c
+kijken of a, b of c niet leeg is
+controleer of a, b en c gelijk zijn
+als ze dezelfde waarde hebben zeg dat je gewonnen hebt
+Laat zien wie er gewonnen met de waarde die in a staat
+einde functie
+
+we roepen de functie check aan met waarde 0, 1 en 2
+we roepen de functie check aan met waarde 3, 4 en 5
+we roepen de functie check aan met waarde 6, 7 en 8
+we roepen de functie check aan met waarde 0, 3 en 6
+
+
+*/
+
+
+/*
+oud
+controleer of positie 3, 4 en 5 dezelde waarde hebben
+als ze dezelfde waarde hebben zeg dat je gewonnen hebt
+controleer of positie 6, 7 en 8 dezelde waarde hebben
+als ze dezelfde waarde hebben zeg dat je gewonnen hebt
+controleer of positie 0, 3 en 6 dezelde waarde hebben
+als ze dezelfde waarde hebben zeg dat je gewonnen hebt
+*/

@@ -1,4 +1,4 @@
-.red{
+/* .red{
     background-color: red;
 }
 
@@ -8,4 +8,13 @@
 
 .color{
     color: blue;
+} */
+
+.div-style{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cyan;
+    border: 5px dotted green;
+    border-radius: 5%;
+    font-weight: bold;
+    font-size: 5em;
 }
