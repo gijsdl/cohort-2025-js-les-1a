@@ -263,45 +263,45 @@
 // showTable(2);
 
 
-function addNumbers(total) {
-    let sum = 0;
-    for (let i = 1; i <= total; i++) {
-        if (i < 10) {
-            let temp = 5;
-            sum += temp;
-        } else {
-            sum += i;
-        }
-    }
-    return sum;
-}
+// function addNumbers(total) {
+//     let sum = 0;
+//     for (let i = 1; i <= total; i++) {
+//         if (i < 10) {
+//             let temp = 5;
+//             sum += temp;
+//         } else {
+//             sum += i;
+//         }
+//     }
+//     return sum;
+// }
 
-console.log(addNumbers(10));
-console.log(addNumbers(20));
+// console.log(addNumbers(10));
+// console.log(addNumbers(20));
 
 
-// 0 | 1 | 2
-// 3 | 4 | 5
-// 6 | 7 | 8
+// // 0 | 1 | 2
+// // 3 | 4 | 5
+// // 6 | 7 | 8
 
-let board = [
-    'X', 'X', 'O', // rij 1
-    'O', 'X', '',  // rij 2
-    '', 'O', ''   // rij 3
-];
+// let board = [
+//     'X', 'X', 'O', // rij 1
+//     'O', 'X', '',  // rij 2
+//     '', 'O', ''   // rij 3
+// ];
 
-console.log(board[5]);
+// console.log(board[5]);
 
-if(board[5] === ''){
-    console.log('is leeg');
-} else {
-    console.log(board[5]);
+// if(board[5] === ''){
+//     console.log('is leeg');
+// } else {
+//     console.log(board[5]);
     
-}
+// }
 
-board[5] = 'X'
+// board[5] = 'X'
 
-console.log(board);
+// console.log(board);
 
 // P02 les 4
 // Schrijf de stappen om te controleren 
@@ -336,3 +336,31 @@ als ze dezelfde waarde hebben zeg dat je gewonnen hebt
 controleer of positie 0, 3 en 6 dezelde waarde hebben
 als ze dezelfde waarde hebben zeg dat je gewonnen hebt
 */
+
+// P02 les 5
+
+const car = {
+    totalWheels: 4,
+    totalDoors: 5,
+    color: 'zwart',
+    KM: 1000,
+    horsePower: 500,
+    licensePlate: '11-AA-11',
+    brand: 'Ford',
+    name: 'Mustang',
+    drive: function(){
+        this.KM += this.horsePower;
+    },
+    reverseDrive: function(){
+        this.KM -= this.horsePower;
+    },
+    horne: function(){
+        console.log('toet');
+    }
+};
+
+console.log(car.KM);
+car.drive();
+console.log(car.KM);
+car.horne();
+
