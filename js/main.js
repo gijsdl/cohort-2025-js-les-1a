@@ -296,7 +296,7 @@
 //     console.log('is leeg');
 // } else {
 //     console.log(board[5]);
-    
+
 // }
 
 // board[5] = 'X'
@@ -348,13 +348,13 @@ const car = {
     licensePlate: '11-AA-11',
     brand: 'Ford',
     name: 'Mustang',
-    drive: function(){
+    drive: function () {
         this.KM += this.horsePower;
     },
-    reverseDrive: function(){
+    reverseDrive: function () {
         this.KM -= this.horsePower;
     },
-    horne: function(){
+    horne: function () {
         console.log('toet');
     }
 };
@@ -363,4 +363,51 @@ console.log(car.KM);
 car.drive();
 console.log(car.KM);
 car.horne();
+
+
+const cars = [
+    {
+        name: 'Mustang',
+        location: 0,
+        speed: 10,
+        updateLocation: function () {
+            this.location += this.speed;
+        }
+    },
+    {
+        name: 'AMG',
+        location: 0,
+        speed: 5,
+        updateLocation: function () {
+            this.location += this.speed;
+        }
+    },
+    {
+        name: 'M classe',
+        location: 0,
+        speed: 7,
+        updateLocation: function () {
+            this.location += this.speed;
+        }
+    },
+];
+
+function showLocation() {
+    for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i].name + " " + cars[i].location);
+    }
+}
+
+function updateLocation(){
+     for (let i = 0; i < cars.length; i++) {
+        cars[i].updateLocation();
+    }
+}
+
+showLocation();
+updateLocation();
+showLocation();
+updateLocation();
+showLocation();
+
 
