@@ -398,8 +398,8 @@ function showLocation() {
     }
 }
 
-function updateLocation(){
-     for (let i = 0; i < cars.length; i++) {
+function updateLocation() {
+    for (let i = 0; i < cars.length; i++) {
         cars[i].updateLocation();
     }
 }
@@ -409,5 +409,38 @@ updateLocation();
 showLocation();
 updateLocation();
 showLocation();
+
+/*
+Maak een variabele highestScore en playerWithHighestScore aan.
+Initialiseer ze met de waarden van de eerste speler in de array.
+Start een loop vanaf het tweede element in de array.
+Vergelijk in de loop de score van de huidige speler met highestScore.
+Als de score hoger is, update je highestScore en playerWithHighestScore.
+Log na de loop de naam van de speler met de hoogste score.
+
+*/
+
+
+const highscores = [
+    { name: 'Alice', score: 10 },
+    { name: 'Bob', score: 15 },
+    { name: 'Charlie', score: 8 },
+    { name: 'Piet', score: 20 },
+    { name: 'Pieter', score: 17 },
+    { name: 'Donald', score: 12 },
+    { name: 'Mickey', score: 15 },
+    { name: 'Mini', score: 25 },
+    { name: 'Katrien', score: 18 },
+];
+
+let highestPlayer = highscores[0];
+
+for (let i = 1; i < highscores.length; i++){
+    if(highscores[i].score > highestPlayer.score){
+        highestPlayer = highscores[i];
+    }
+}
+
+console.log(highestPlayer.name + " " + highestPlayer.score);
 
 
